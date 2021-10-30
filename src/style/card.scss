@@ -1,0 +1,86 @@
+:root {
+  --baseColor: #fff;
+  --bacground-color: #f4f4f4;
+  --transition-height: height 0.3s ease-in-out;
+  --transition-transform: transform 0.3s ease-in-out;
+}
+
+html,
+body {
+}
+
+.cards {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-template-columns: repeat(auto-fill, 320px);
+  grid-gap: 20px;
+  width: 100%;
+
+  .card {
+    background-color: var(--baseColor);
+    max-width: 300px;
+    height: calc(100% - 30px);
+    padding: 10px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      height: calc(100% + 20px);
+      transform: translateY(-30px);
+
+      .card-actions {
+        bottom: 0;
+      }
+    }
+
+    &-product {
+      object-fit: contain;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    h2 {
+      color: #262626;
+      font-weight: 800;
+      margin: 10px;
+    }
+
+    &-detail {
+      color: #262626;
+      padding: 10px 0;
+    }
+
+    &-actions {
+      position: absolute;
+      bottom: -45px;
+      transition: bottom 0.3s ease-in-out;
+
+      button {
+        display: inline-block;
+        border: 1px solid transparent;
+        padding: 14px 25px 14px 23px;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 15px;
+        line-height: 15px;
+        transition: all 0.2s;
+        background: #dc1405;
+        border-color: #dc1405;
+        color: #fff;
+      }
+
+      button + button {
+        margin-left: 10px;
+      }
+    }
+  }
+}

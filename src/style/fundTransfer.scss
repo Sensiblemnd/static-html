@@ -1,0 +1,76 @@
+:root {
+  --bgColor: #5555c1;
+  --text-color: #fff;
+  --button-color: #f07d51;
+}
+
+.fund-transfer {
+  align-items: center;
+  background-color: var(--bgColor);
+  display: flex;
+
+  .hexagon {
+    background-color: var(--bgColor);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    height: 173.21px;
+    margin: 86.6px 0;
+    position: absolute;
+    width: 300px;
+
+    &.z-index\:1 {
+      z-index: 1;
+    }
+
+    &.z-index\:2 {
+      z-index: 2;
+    }
+
+    &.scale-sm {
+      transform: scale(0.5);
+    }
+
+    &.scale-md {
+      transform: scale(1.5);
+    }
+
+    &.scale-lg {
+      transform: scale(5);
+    }
+
+    &::before,
+    &::after {
+      background-color: inherit;
+      border-radius: inherit;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      content: "";
+      height: 212.13px;
+      left: 43.934px;
+      position: absolute;
+      width: 212.13px;
+      z-index: 1;
+    }
+
+    &::before {
+      top: -99px;
+      transform: scaleY(0.5774) rotate(-45deg) translateY(-0);
+    }
+
+    &::after {
+      bottom: -99px;
+      transform: scaleY(0.5774) rotate(-45deg);
+    }
+
+    & span {
+      background: inherit;
+      border-radius: inherit;
+      display: block;
+      height: 173.2051px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 300px;
+      z-index: 2;
+    }
+  }
+}
